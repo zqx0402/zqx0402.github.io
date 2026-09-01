@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>徐梓倩｜个人简历</title>
+<meta name="description" content="徐梓倩个人简历网站">
+
+<style>
+:root{
+ --ink:#17211d;--muted:#68736e;--accent:#28594c;--accent-soft:#edf4f1;
+ --line:#dce3df;--bg:#f5f7f5;--paper:#fff;--shadow:0 10px 30px rgba(28,48,40,.06)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;background:var(--bg);color:var(--ink);
+ font-family:"SimSun","宋体","STSong","Songti SC",serif;line-height:1.78;
+ -webkit-font-smoothing:antialiased
+}
+body:before{content:"";display:block;height:6px;background:var(--accent)}
+a{color:inherit;text-decoration:none}
+.resume{width:min(1040px,calc(100% - 36px));margin:36px auto 58px;padding:0;background:transparent}
+
+header{
+ background:var(--paper);border:1px solid var(--line);border-radius:16px;
+ padding:38px 42px 34px;margin-bottom:22px;box-shadow:var(--shadow)
+}
+.name{font-size:40px;line-height:1.15;font-weight:bold;letter-spacing:.14em;margin:0 0 14px}
+.contact{font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 20px}
+.contact a:hover{color:var(--accent)}
+.target{
+ margin-top:22px;padding:14px 17px;background:var(--accent-soft);
+ border-left:4px solid var(--accent);border-radius:6px;font-size:15px;color:#34433d
+}
+
+/* Every resume section uses the exact same vertical card direction */
+section{
+ display:block;background:var(--paper);border:1px solid var(--line);border-radius:16px;
+ padding:30px 36px;margin:0 0 18px;box-shadow:var(--shadow)
+}
+.section-title{
+ position:static;display:flex;align-items:center;gap:10px;
+ margin:0 0 22px;padding:0 0 10px;border-bottom:1px solid var(--line);
+ font-size:20px;font-weight:bold;color:var(--accent);letter-spacing:.08em
+}
+.section-title:before{
+ content:"";display:block;width:4px;height:20px;margin:0;
+ background:var(--accent);border-radius:3px
+}
+
+/* Entries are all vertical, full-width rows; no mixed horizontal/vertical cards */
+.entry{
+ display:block;width:100%;background:transparent;border:0;border-radius:0;
+ box-shadow:none;padding:0 0 20px;margin:0 0 20px;
+ border-bottom:1px dashed #dfe4e1;transform:none
+}
+.entry:hover{transform:none;box-shadow:none}
+.entry:last-child{padding-bottom:0;margin-bottom:0;border-bottom:0}
+.entry-head{
+ display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;
+ align-items:baseline;font-weight:bold
+}
+.entry-head .org{font-size:17px}
+.date{font-size:13px;color:var(--muted);white-space:nowrap;font-weight:normal}
+.subline{display:flex;justify-content:space-between;gap:16px;margin:4px 0 9px;font-size:14px}
+.role{font-weight:bold;color:var(--accent)}.place{color:var(--muted)}
+.details{margin:8px 0 0;padding-left:22px;font-size:14px;color:#34413c}
+.details li{margin:7px 0;padding-left:2px}
+.details li::marker{color:#698077}
+.details b{color:#1c2924}
+.course,.note{font-size:14px;margin-top:5px;color:#414d48}
+.highlight{font-weight:bold;color:var(--accent)}
+.skills p{
+ margin:0;padding:8px 0;background:transparent;border:0;border-radius:0;
+ border-bottom:1px dashed #e1e5e3;font-size:14px
+}
+.skills p:last-child{border-bottom:0}
+footer{margin-top:24px;padding-top:10px;text-align:center;color:#8a928e;font-size:12px;letter-spacing:.07em}
+
+@media(max-width:700px){
+ body:before{height:5px}.resume{width:min(100% - 24px,1040px);margin:18px auto 35px}
+ header,section{padding:25px 21px;border-radius:12px}.name{font-size:34px}
+ .contact{display:block}.contact span,.contact a{display:block;margin:3px 0}
+ .entry-head{grid-template-columns:1fr;gap:0}.date{margin-top:2px}
+ .subline{display:block}.place{display:block;margin-top:2px}.target{font-size:14px}
+}
+@media print{
+ body{background:#fff}body:before{display:none}.resume{width:100%;margin:0}
+ header,section{box-shadow:none}
+}
+</style>
+
+</head>
+<body>
+<article class="resume">
+<header>
+<h1 class="name">徐梓倩</h1>
+<div class="contact">
+<span>电话：+86 18913545058</span>
+<span>微信：Grace_April02</span>
+<a href="mailto:13776368518@163.com">邮箱：13776368518@163.com</a>
+</div>
+<div class="target">从用户需求与业务问题出发，通过数据分析拆解问题，并以跨部门沟通与项目推进推动方案落地。</div>
+</header>
+
+<section>
+<div class="section-title">教育背景</div>
+<div class="entry">
+ <div class="entry-head"><span class="org">新加坡国立大学</span><span class="date">2026.8－至今</span></div>
+ <div class="subline"><span class="role">生物医学工程硕士</span><span class="place">新加坡</span></div>
+ <div class="course">相关课程：医疗市场监管策略、脑际接口、全球医疗器械概论</div>
+</div>
+<div class="entry">
+ <div class="entry-head"><span class="org">南京师范大学</span><span class="date">2022.9－2026.6</span></div>
+ <div class="subline"><span class="role">工学学士，生物工程（制药）方向</span><span class="place">中国，南京</span></div>
+ <div class="note">GPA 3.8/5.0，专业排名：4th/70</div>
+ <div class="note highlight">南京师范大学优秀毕业生、三好学生</div>
+</div>
+</section>
+
+<section>
+<div class="section-title">实习经历</div>
+<div class="entry">
+ <div class="entry-head"><span class="org">上海创泰医药有限公司</span><span class="date">2025.7－2025.8</span></div>
+ <div class="subline"><span class="role">药物活性检测实习生</span></div>
+ <ol class="details">
+  <li><b>执行检测实验：</b>于专注 GLP-1 创新药研发的生物医药企业，深度参与小分子药物活性评价流程，完成小鼠取血、ELISA 活性检测、细胞培养与传代等关键实验，为药物活性评估提供初步依据。</li>
+  <li><b>完善实验操作：</b>利用 GraphPad、Origin 等软件系统处理实验数据，并进行文献比对，进一步优化实验过程。</li>
+ </ol>
+</div>
+<div class="entry">
+ <div class="entry-head"><span class="org">普罗旺斯欧舒丹贸易（上海）有限公司</span><span class="date">2025.11－2026.2</span></div>
+ <div class="subline"><span class="role">产品注册实习生</span></div>
+ <ol class="details">
+  <li><b>材料整合与部门协调：</b>协助完成进口化妆品备案资料整理与提交，翻译英文报告、整理合规审核，确保符合中国海关与药监局法规要求；跨部门协调供应链、财务团队，推动注册文件流转与审批流程，提升物料采购与进口通关效率。</li>
+  <li><b>进度跟踪与数据分析：</b>使用 Excel 交叉分析产品注册进度、物流节点等数据进行清洗与分析，输出可视化报表支持部门决策。</li>
+  <li><b>宣称审核与样品检验：</b>系统整理国内外化妆品法规更新动态，撰写合规摘要支持研发与质量部门决策；查找原材料宣称对应论文并撰写报告；参与实验室送样流程协调，跟踪样品物流状态；整合样品检验文件并制作清关资料等。</li>
+ </ol>
+</div>
+</section>
+
+<section>
+<div class="section-title">项目经历</div>
+<div class="entry">
+ <div class="entry-head"><span class="org">昆山杜克大学自然与应用科学学部</span><span class="date">2026.4－2026.8</span></div>
+ <div class="subline"><span class="role">实验室支持实习生</span></div>
+ <ol class="details">
+  <li><b>全链路内容策划与创作：</b>跨部门完成重大学部活动的全程追踪，组织昆杜暑期夏校 Science in Everyday Life 近 20 场大小活动。负责从双语沟通、资源筹措到现场调度的全流程，驱动超 1500 名师生的深度参与。</li>
+  <li><b>视觉内容设计与制作：</b>统筹 5 人团队维系学部公众平台，负责内容策划、视觉调性把控及公众号发布全流程，有效提高学院品牌曝光量。</li>
+ </ol>
+</div>
+</section>
+
+<section>
+<div class="section-title">科研经历</div>
+<div class="entry">
+ <div class="entry-head"><span class="org">国际基因工程大赛（iGEM）金奖</span><span class="date">2023.4－2023.11</span></div>
+ <div class="subline"><span class="role">队员</span></div>
+ <ul class="details">
+  <li>参与跨学科团队，运用干湿实验结合技术手段，构建高效降解塑料的双酶体系，推动合成生物学在环保领域的应用。</li>
+  <li><b>研究方法：</b>利用机器学习技术查找祖先序列，辅助 SQL、Origin、GraphPad 等软件整合数据分析选取组合条件，MD 模拟蛋白质结构；主导举办南京地区 iGEM 交流会议，协调多方合作（南京质检院、苏州环保局等），推动项目落地。</li>
+  <li><b>成果与影响：</b>构建具有高效降解能力的双酶体系，掌握基本数据分析软件，实现科研思维和商业思维的双重转换。</li>
+ </ul>
+</div>
+<div class="entry">
+ <div class="entry-head"><span class="org">大学生创新创业国家级立项</span><span class="date">2023.11－2025.6</span></div>
+ <div class="subline"><span class="role">主持人</span></div>
+ <ul class="details">
+  <li>主持“金属有机框架固定化酶在塑料降解中的应用”课题，系统设计实验方案，协调团队分工，推动项目高效执行与成果转化。</li>
+  <li><b>研究方法：</b>以分子合成策略固定酶与框架，利用 FTIR/SEM/XRD 等方式表征，分子动力学/GROMACS 模拟结合状态，推进课题。</li>
+  <li><b>学术成果：</b>以第二作者身份发表于 Industrial Crops &amp; Products（IF=6.8，JCR Q1），同时该项目申报第九届大学生生命科学竞赛并荣获省级三等奖。</li>
+ </ul>
+</div>
+<div class="entry">
+ <div class="entry-head"><span class="org">第十届大学生生命科学竞赛</span><span class="date">2025.9－2026.6</span></div>
+ <div class="subline"><span class="role">主持人</span></div>
+ <ul class="details">
+  <li>主持“乳杆菌-果胶低聚糖互作对肠道屏障的影响及共培养体系研究”课题，探究共培养模型在益生菌、益生元互作体系中的应用。</li>
+  <li><b>研究方法：</b>利用细胞实验、Western Blot、qPCR 等技术筛选表征 POS 对乳杆菌的增殖作用，并在共培养模型中验证变量对肠道改善作用。</li>
+ </ul>
+</div>
+</section>
+
+<section class="skills">
+<div class="section-title">技能 / 其他信息</div>
+<p><b>语言能力：</b>英语（流利，IELTS 6.5）</p>
+<p><b>技术技能：</b>MS Office、Origin、GraphPad Prism、Canva、秀米</p>
+</section>
+
+<footer>徐梓倩 · 个人简历</footer>
+</article>
+</body>
+</html>
