@@ -1,99 +1,76 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>徐梓倩｜个人简历</title>
-<meta name="description" content="徐梓倩个人简历网站">
-
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>徐梓倩 / Ziqian Xu (Grace) | Resume</title>
 <style>
 :root{
- --ink:#17211d;--muted:#68736e;--accent:#28594c;--accent-soft:#edf4f1;
- --line:#dce3df;--bg:#f5f7f5;--paper:#fff;--shadow:0 10px 30px rgba(28,48,40,.06)
+ --ink:#10264a;--text:#263d5f;--muted:#74839b;--blue:#2f67c8;--blue2:#6d9dea;
+ --pale:#eef5ff;--line:#dce5f1;--bg:#f8fbff;--paper:#fff;
+ --shadow:0 12px 34px rgba(39,74,126,.09)
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
- margin:0;background:var(--bg);color:var(--ink);
- font-family:"SimSun","宋体","STSong","Songti SC",serif;line-height:1.78;
- -webkit-font-smoothing:antialiased
-}
-body:before{content:"";display:block;height:6px;background:var(--accent)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(180deg,#f7fbff,#fff 48%);color:var(--text);font-family:"SimSun","宋体","STSong","Songti SC",serif;line-height:1.72}
+body.en-mode{font-family:"Times New Roman",Times,serif}
 a{color:inherit;text-decoration:none}
-.resume{width:min(1040px,calc(100% - 36px));margin:36px auto 58px;padding:0;background:transparent}
+.scroll-progress{position:fixed;top:0;left:0;height:3px;background:var(--blue);z-index:200;width:0}
+.site-nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.9);backdrop-filter:blur(15px);border-bottom:1px solid rgba(220,229,241,.9)}
+.nav-inner{width:min(1180px,calc(100% - 36px));height:66px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.nav-brand{font-size:20px;font-weight:bold;color:var(--ink);letter-spacing:.05em}
+.nav-brand:before{content:"ZX";font-family:"Times New Roman",serif;font-size:27px;color:var(--blue);margin-right:12px}
+.nav-links{display:flex;align-items:center;gap:24px;font-size:14px;color:var(--ink)}
+.nav-links a{position:relative;padding:22px 0}.nav-links a:after{content:"";position:absolute;left:0;bottom:13px;width:0;height:2px;background:var(--blue);transition:.2s}.nav-links a:hover:after{width:100%}
+.nav-lang{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:8px 15px;cursor:pointer;font-family:inherit}
+.resume{width:min(1180px,calc(100% - 36px));margin:0 auto 70px}
+.toolbar{display:none!important}
+.chinese>header,.english>header{
+ min-height:610px;margin:0 calc((1180px - 100vw)/2);padding:92px max(calc((100vw - 1180px)/2),18px);
+ border:0;border-radius:0;box-shadow:none;position:relative;overflow:hidden;
+ background:
+ linear-gradient(90deg,rgba(246,250,255,.98) 0%,rgba(246,250,255,.94) 43%,rgba(246,250,255,.20) 67%,rgba(246,250,255,.03) 100%),
+ url("assets/portrait.jpg") right center/auto 100% no-repeat,
+ #dceafb;
+}
+.chinese>header:before,.english>header:before{content:"";position:absolute;width:560px;height:560px;border:1px solid rgba(70,112,184,.13);border-radius:50%;left:-90px;top:50px}
+.name{position:relative;z-index:2;font-size:66px;line-height:1.05;color:#0d2447;margin:30px 0 18px;letter-spacing:.10em;max-width:620px}
+body.en-mode .name{font-size:58px;letter-spacing:.015em}
+.contact{position:relative;z-index:2;margin-top:35px;display:flex;gap:20px;flex-wrap:wrap;color:#324c73;font-size:14px;max-width:670px}
+.target{position:relative;z-index:2;margin-top:24px;padding:0;border:0;background:none;border-radius:0;font-size:17px;line-height:1.9;color:#294364;max-width:650px}
 
-header{
- background:var(--paper);border:1px solid var(--line);border-radius:16px;
- padding:38px 42px 34px;margin-bottom:22px;box-shadow:var(--shadow)
+section{position:relative;margin:0;padding:64px 0 24px;background:transparent;border:0;border-radius:0;box-shadow:none}
+section:hover{transform:none;box-shadow:none;border:0}
+.section-title{display:flex;align-items:baseline;gap:16px;border:0;padding:0 0 22px;margin:0;color:var(--ink);font-size:30px;letter-spacing:.08em}
+.section-title:before{content:"";width:8px;height:30px;background:var(--blue);border-radius:0;margin:0}
+.entry{position:relative;margin:0 0 18px;padding:25px 28px 25px 145px;background:#fff;border:1px solid var(--line);border-radius:13px;box-shadow:0 8px 24px rgba(39,74,126,.06);transition:.2s}
+.entry:hover{transform:translateY(-2px);box-shadow:var(--shadow);padding-left:145px;background:#fff}
+.entry:before{content:"";position:absolute;left:82px;top:0;bottom:-19px;width:1px;background:#d7e2f1}
+.entry:after{content:"";position:absolute;left:77px;top:31px;width:9px;height:9px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px #eaf2ff}
+.entry:last-child:before{bottom:25px}
+.entry-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:baseline}.org{font-size:17px;font-weight:bold;color:var(--ink)}.date{font-size:13px;color:var(--muted);white-space:nowrap}
+.subline{display:flex;justify-content:space-between;gap:16px;margin:5px 0 8px;font-size:14px}.role{font-weight:bold;color:#385f99}.place{color:var(--muted)}
+.details{margin:8px 0 0;padding-left:20px;font-size:14px;color:#344a6b}.details li{margin:7px 0}.details b{color:#19365f}
+.course,.note{font-size:14px;color:#344a6b;margin-top:5px}.highlight{font-weight:bold;color:#244e8a}
+.skills p{margin:0 0 12px;padding:18px 22px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 6px 20px rgba(39,74,126,.045);font-size:14px}
+footer{text-align:center;color:#8795aa;font-size:12px;padding:35px 0}
+.english{display:none}body.en-mode .chinese{display:none}body.en-mode .english{display:block}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}.reveal.visible{opacity:1;transform:none}
+.backtop{position:fixed;right:25px;bottom:24px;width:44px;height:44px;border:0;border-radius:50%;background:#173e7c;color:#fff;font-size:20px;cursor:pointer;box-shadow:0 8px 22px rgba(24,62,124,.22);opacity:0;pointer-events:none;transition:.2s}.backtop.show{opacity:1;pointer-events:auto}
+@media(max-width:800px){
+ .nav-links a{display:none}.nav-inner{height:58px}.resume{width:min(100% - 24px,1180px)}
+ .chinese>header,.english>header{min-height:720px;margin:0 -12px;padding:42px 24px 300px;background:linear-gradient(180deg,rgba(246,250,255,.97) 0%,rgba(246,250,255,.91) 52%,rgba(246,250,255,.12) 70%),url("assets/portrait.jpg") center bottom/auto 52% no-repeat,#dceafb}
+ .name{font-size:44px}
+ section{padding-top:42px}.section-title{font-size:24px}
+ .entry{padding:21px 18px 21px 45px}.entry:hover{padding-left:45px}.entry:before{left:22px}.entry:after{left:17px}.entry-head{grid-template-columns:1fr;gap:2px}.date{white-space:normal}
 }
-.name{font-size:40px;line-height:1.15;font-weight:bold;letter-spacing:.14em;margin:0 0 14px}
-.contact{font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 20px}
-.contact a:hover{color:var(--accent)}
-.target{
- margin-top:22px;padding:14px 17px;background:var(--accent-soft);
- border-left:4px solid var(--accent);border-radius:6px;font-size:15px;color:#34433d
-}
-
-/* Every resume section uses the exact same vertical card direction */
-section{
- display:block;background:var(--paper);border:1px solid var(--line);border-radius:16px;
- padding:30px 36px;margin:0 0 18px;box-shadow:var(--shadow)
-}
-.section-title{
- position:static;display:flex;align-items:center;gap:10px;
- margin:0 0 22px;padding:0 0 10px;border-bottom:1px solid var(--line);
- font-size:20px;font-weight:bold;color:var(--accent);letter-spacing:.08em
-}
-.section-title:before{
- content:"";display:block;width:4px;height:20px;margin:0;
- background:var(--accent);border-radius:3px
-}
-
-/* Entries are all vertical, full-width rows; no mixed horizontal/vertical cards */
-.entry{
- display:block;width:100%;background:transparent;border:0;border-radius:0;
- box-shadow:none;padding:0 0 20px;margin:0 0 20px;
- border-bottom:1px dashed #dfe4e1;transform:none
-}
-.entry:hover{transform:none;box-shadow:none}
-.entry:last-child{padding-bottom:0;margin-bottom:0;border-bottom:0}
-.entry-head{
- display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;
- align-items:baseline;font-weight:bold
-}
-.entry-head .org{font-size:17px}
-.date{font-size:13px;color:var(--muted);white-space:nowrap;font-weight:normal}
-.subline{display:flex;justify-content:space-between;gap:16px;margin:4px 0 9px;font-size:14px}
-.role{font-weight:bold;color:var(--accent)}.place{color:var(--muted)}
-.details{margin:8px 0 0;padding-left:22px;font-size:14px;color:#34413c}
-.details li{margin:7px 0;padding-left:2px}
-.details li::marker{color:#698077}
-.details b{color:#1c2924}
-.course,.note{font-size:14px;margin-top:5px;color:#414d48}
-.highlight{font-weight:bold;color:var(--accent)}
-.skills p{
- margin:0;padding:8px 0;background:transparent;border:0;border-radius:0;
- border-bottom:1px dashed #e1e5e3;font-size:14px
-}
-.skills p:last-child{border-bottom:0}
-footer{margin-top:24px;padding-top:10px;text-align:center;color:#8a928e;font-size:12px;letter-spacing:.07em}
-
-@media(max-width:700px){
- body:before{height:5px}.resume{width:min(100% - 24px,1040px);margin:18px auto 35px}
- header,section{padding:25px 21px;border-radius:12px}.name{font-size:34px}
- .contact{display:block}.contact span,.contact a{display:block;margin:3px 0}
- .entry-head{grid-template-columns:1fr;gap:0}.date{margin-top:2px}
- .subline{display:block}.place{display:block;margin-top:2px}.target{font-size:14px}
-}
-@media print{
- body{background:#fff}body:before{display:none}.resume{width:100%;margin:0}
- header,section{box-shadow:none}
-}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
 </style>
-
-</head>
-<body>
-<article class="resume">
+</head><body><div class="scroll-progress" id="progress"></div>
+<nav class="site-nav"><div class="nav-inner">
+<div class="nav-brand"><span class="nav-zh">徐梓倩</span><span class="nav-en" style="display:none">Ziqian Xu (Grace)</span></div>
+<div class="nav-links">
+<a href="#zh-education" data-zh="教育背景" data-en="EDUCATION">教育背景</a>
+<a href="#zh-internship" data-zh="实习经历" data-en="EXPERIENCE">实习经历</a>
+<a href="#zh-project" data-zh="项目经历" data-en="PROJECTS">项目经历</a>
+<a href="#zh-research" data-zh="科研经历" data-en="RESEARCH">科研经历</a>
+<a href="#zh-skills" data-zh="技能" data-en="SKILLS">技能</a>
+<button class="nav-lang" id="navLang">English</button>
+</div></div></nav><div class="toolbar"><button class="langbtn" onclick="toggleLang()">English</button></div><article class="resume"><div class="chinese">
 <header>
 <h1 class="name">徐梓倩</h1>
 <div class="contact">
@@ -104,7 +81,7 @@ footer{margin-top:24px;padding-top:10px;text-align:center;color:#8a928e;font-siz
 <div class="target">从用户需求与业务问题出发，通过数据分析拆解问题，并以跨部门沟通与项目推进推动方案落地。</div>
 </header>
 
-<section>
+<section id="zh-education">
 <div class="section-title">教育背景</div>
 <div class="entry">
  <div class="entry-head"><span class="org">新加坡国立大学</span><span class="date">2026.8－至今</span></div>
@@ -119,7 +96,7 @@ footer{margin-top:24px;padding-top:10px;text-align:center;color:#8a928e;font-siz
 </div>
 </section>
 
-<section>
+<section id="zh-internship">
 <div class="section-title">实习经历</div>
 <div class="entry">
  <div class="entry-head"><span class="org">上海创泰医药有限公司</span><span class="date">2025.7－2025.8</span></div>
@@ -140,7 +117,7 @@ footer{margin-top:24px;padding-top:10px;text-align:center;color:#8a928e;font-siz
 </div>
 </section>
 
-<section>
+<section id="zh-project">
 <div class="section-title">项目经历</div>
 <div class="entry">
  <div class="entry-head"><span class="org">昆山杜克大学自然与应用科学学部</span><span class="date">2026.4－2026.8</span></div>
@@ -152,7 +129,7 @@ footer{margin-top:24px;padding-top:10px;text-align:center;color:#8a928e;font-siz
 </div>
 </section>
 
-<section>
+<section id="zh-research">
 <div class="section-title">科研经历</div>
 <div class="entry">
  <div class="entry-head"><span class="org">国际基因工程大赛（iGEM）金奖</span><span class="date">2023.4－2023.11</span></div>
@@ -182,13 +159,52 @@ footer{margin-top:24px;padding-top:10px;text-align:center;color:#8a928e;font-siz
 </div>
 </section>
 
-<section class="skills">
+<section class="skills" id="zh-skills">
 <div class="section-title">技能 / 其他信息</div>
 <p><b>语言能力：</b>英语（流利，IELTS 6.5）</p>
 <p><b>技术技能：</b>MS Office、Origin、GraphPad Prism、Canva、秀米</p>
 </section>
 
 <footer>徐梓倩 · 个人简历</footer>
-</article>
-</body>
-</html>
+</div><div class="english"><header><h1 class="name">Ziqian Xu (Grace)</h1><div class="contact"><span>Phone: +86 18913545058</span><span>WeChat: Grace_April02</span><span>Email: 13776368518@163.com</span></div></header>
+<section id="en-education"><div class="section-title">EDUCATION</div>
+<div class="entry"><div class="entry-head"><span class="org">National University of Singapore</span><span class="date">Singapore | Aug. 2026 – Present</span></div><div class="subline"><span class="role">M.Sc. in Biomedical Engineering</span></div><div class="course">• Relevant Courses: Regulatory Strategies for Medical Markets, Brain-Computer Interfaces, Global Medical Device Overview.</div></div>
+<div class="entry"><div class="entry-head"><span class="org">Nanjing Normal University</span><span class="date">Nanjing, China | Sept. 2022 – Jun. 2026</span></div><div class="subline"><span class="role">B.Eng. in Bioengineering (Pharmaceutical Direction)</span></div><div class="note">• GPA: 3.8 / 5.0 (Rank: 4 / 70) | Honors: Outstanding Graduate of Nanjing Normal University, Merit Student Award.</div></div></section>
+<section id="en-internship"><div class="section-title">INTERNSHIP EXPERIENCE</div>
+<div class="entry"><div class="entry-head"><span class="org">Shanghai Chuangtai Pharmaceutical Co., Ltd.</span><span class="date">Shanghai, China | Jul. 2025 – Aug. 2025</span></div><div class="subline"><span class="role">Drug Bioactivity Testing Intern</span></div><ul class="details"><li><b>Assay Execution &amp; Evaluation:</b> Participated in GLP-1 small molecule drug bioactivity testing; conducted blood sampling, ELISA assays, cell culture, and passage to provide efficacy data.</li><li><b>Data Processing &amp; Optimization:</b> Analyzed experimental results using GraphPad Prism and Origin; compared findings with relevant literature to refine assay protocols.</li></ul></div>
+<div class="entry"><div class="entry-head"><span class="org">L'Occitane Trading (Shanghai) Co., Ltd.</span><span class="date">Shanghai, China | Nov. 2025 – Feb. 2026</span></div><div class="subline"><span class="role">Product Registration Intern</span></div><ul class="details"><li><b>Dossier Management &amp; Clearance:</b> Organized import cosmetic filing dossiers, translated technical reports, verified NMPA/Customs compliance, and coordinated across departments to speed up clearance.</li><li><b>Data Analysis &amp; Reporting:</b> Cleaned and analyzed registration and logistics data via Excel, creating visual dashboards to support departmental decision-making.</li><li><b>Regulatory Review &amp; Testing:</b> Tracked global cosmetics regulations to draft compliance summaries, researched raw material claims, and managed lab sample testing logistics.</li></ul></div></section>
+<section id="en-project"><div class="section-title">PROJECT EXPERIENCE</div><div class="entry"><div class="entry-head"><span class="org">Duke Kunshan University – Div. of Natural &amp; Applied Sciences</span><span class="date">Kunshan, China | Apr. 2026 – Aug. 2026</span></div><div class="subline"><span class="role">Lab Support Intern</span></div><ul class="details"><li><b>Event Operations:</b> Planned and operated 20+ summer school sessions ('Science in Everyday Life'), handling bilingual communications and logistics for 1,500+ participants.</li><li><b>Media Management:</b> Led a 5-member team managing official media channels, overseeing content strategy and WeChat publishing to enhance brand visibility.</li></ul></div></section>
+<section id="en-research"><div class="section-title">RESEARCH EXPERIENCE</div>
+<div class="entry"><div class="entry-head"><span class="org">International Genetically Engineered Machine (iGEM) Competition</span><span class="date">Apr. 2023 – Nov. 2023</span></div><div class="subline"><span class="role">Team Member | Gold Medal</span></div><ul class="details"><li><b>Dual-Enzyme System:</b> Engineered a high-efficiency dual-enzyme plastic degradation system using wet and dry lab approaches.</li><li><b>Methodology &amp; Execution:</b> Reconstructed ancestral sequences via ML, integrated data with SQL/Origin/GraphPad, performed MD simulations, and co-organized the Nanjing iGEM Exchange Conference.</li></ul></div>
+<div class="entry"><div class="entry-head"><span class="org">National Innovation &amp; Entrepreneurship Training Program</span><span class="date">Nov. 2023 – Jun. 2025</span></div><div class="subline"><span class="role">Project Leader | National Level</span></div><ul class="details"><li><b>Project Leadership:</b> Directed research on MOF-immobilized enzymes for plastic degradation; characterized materials via FTIR/SEM/XRD and evaluated binding via GROMACS MD simulations.</li><li><b>Academic Achievements:</b> Co-authored a paper published in Industrial Crops &amp; Products (IF=6.8, JCR Q1, 2nd Author); won Provincial 3rd Prize in Life Science Competition.</li></ul></div>
+<div class="entry"><div class="entry-head"><span class="org">The 10th National Undergraduate Life Science Competition</span><span class="date">Sept. 2025 – Jun. 2026</span></div><div class="subline"><span class="role">Project Leader</span></div><ul class="details"><li><b>Experimental Methodology:</b> Investigated Lactobacillus-POS interactions on gut barrier function, applying cell assays, Western Blot, and qPCR in co-culture models.</li></ul></div></section>
+<section class="skills" id="en-skills"><div class="section-title">SKILLS &amp; ADDITIONAL INFORMATION</div><p><b>Language Skills:</b> English (Fluent, IELTS 6.5), Mandarin Chinese (Native)</p><p><b>Technical Skills:</b> MS Office, Origin, GraphPad Prism, Molecular Dynamics (GROMACS), SQL, AIGC Platforms, Codex, Canva, Xiumi</p></section><footer>Ziqian Xu (Grace) · Resume</footer></div></article><button class="backtop" id="backtop" aria-label="Back to top">↑</button>
+<script>
+const body=document.body, lang=document.getElementById('navLang');
+function syncNav(){
+ const en=body.classList.contains('en-mode');
+ document.querySelector('.nav-zh').style.display=en?'none':'inline';
+ document.querySelector('.nav-en').style.display=en?'inline':'none';
+ document.querySelectorAll('.nav-links a').forEach((a,i)=>{
+   a.textContent=en?a.dataset.en:a.dataset.zh;
+   const ids=en?['en-education','en-internship','en-project','en-research','en-skills']:
+                ['zh-education','zh-internship','zh-project','zh-research','zh-skills'];
+   a.href='#'+ids[i];
+ });
+ lang.textContent=en?'中文':'English';
+ document.documentElement.lang=en?'en':'zh-CN';
+}
+lang.addEventListener('click',()=>{body.classList.toggle('en-mode');syncNav();window.scrollTo({top:0,behavior:'smooth'});});
+document.querySelectorAll('header, section').forEach(el=>el.classList.add('reveal'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const progress=document.getElementById('progress'), back=document.getElementById('backtop');
+function onScroll(){
+ const h=document.documentElement.scrollHeight-innerHeight;
+ progress.style.width=(h>0?(scrollY/h)*100:0)+'%';
+ back.classList.toggle('show',scrollY>500);
+}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+back.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+syncNav();
+</script></body></html>
